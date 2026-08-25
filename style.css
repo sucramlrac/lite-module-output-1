@@ -27,6 +27,29 @@ header {
 
 nav {
     grid-area: nav;
+    & ol {
+        margin: 0;
+        padding: 0;
+        & li {
+            list-style-position: inside;
+        }
+        & li:not(:last-child) {
+            margin-bottom: 3em;
+        }
+        & li:nth-child(1) {
+            padding-left: 0;
+        }
+        & li:nth-child(2) {
+            padding-left: 1em;
+        }
+        & li:nth-child(3) {
+            padding-left: 2em;
+        }
+        & li:nth-child(4) {
+            padding-left: 3em;
+        }
+        
+    }
 }
 
 main {
@@ -34,10 +57,20 @@ main {
     & article {
         & div {
             margin-top: 1em;
+            font-weight: bolder;
         }
         & h2 {
             margin-top: 0;
         }
+        & ul, ol {
+            & li:not(:last-child) {
+                margin-bottom: 1em;
+            }
+        }
+    }
+
+    & article:not(:first-child) {
+        margin-top: 4em;
     }
 }
 
